@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 //этот синтаксис стайл компонента вернет кнопку но со стилями которые мы укажем в обратных ковычках
 const Button = styled.button`
- 
+
+  width: 100%;
   font: inherit;
   padding: 0.5rem 1.5rem;
   color: white;
@@ -12,15 +13,19 @@ const Button = styled.button`
   box-shadow: 0 0 4px rgba(50, 50, 50, 0.25);
   cursor: pointer;
 
-&:focus {
-  outline: none;
-}
+  @media (min-width: 700px) {
+    width: auto;
+  }
 
-&:hover,
-&:active {
-  background: #245fbd;
-  box-shadow: 0 0 8px rgba(50, 50, 50, 0.25);
-}
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:active {
+    background: #245fbd;
+    box-shadow: 0 0 8px rgba(50, 50, 50, 0.25);
+  }
 `;
 
 // const Button = (props) => {
